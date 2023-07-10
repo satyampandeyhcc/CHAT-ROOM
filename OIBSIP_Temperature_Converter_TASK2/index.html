@@ -1,0 +1,526 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Unit Convertor BY SATYAM PANDEY</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://dohliam.github.io/dropin-minimal-css/min/milligram.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script2.js" type="text/javascript">
+      //
+    </script>
+    <script src="script1.js" type="text/javascript">
+      //
+    </script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="hero intros">
+      <h1 class="calculator">Temperature Convertor And Other Convertor</h1>
+    </div>
+
+    <div class="hero intro">
+      <select id="grpSelect" onchange="grpSwitch()">
+        <option value="Time">Time</option>
+        <option value="Temperature">Temperature</option>
+        <option value="Mass">Mass</option>
+        <option value="Area">Area</option>
+        <option value="Volume">Volume</option>
+        <option value="Length">Length</option>
+        <option value="Speed">Speed</option>
+        <option value="IT">IT</option>
+      </select>
+    </div>
+
+
+    
+    <div id="Time">
+      <div class="hero">
+        <h3>Time</h3>
+      </div>
+
+      <div class="hero">
+        <input
+          type="number"
+          value="1"
+          min="1"
+          id="timeamt"
+          onkeyup="convUnits('time')"
+        />
+      </div>
+
+      <div class="hero">
+        <h4>From</h4>
+      </div>
+
+      <div class="hero">
+        <select id="timefr" onchange="convUnits('time')">
+          <option value="uMs">ms</option>
+          <option value="uSec">sec</option>
+          <option value="uMin">min</option>
+          <option selected value="uHr">hr</option>
+          <option value="uDay">day</option>
+          <option value="uWk">wk</option>
+          <option value="uMo">mo</option>
+          <option value="uYr">yr</option>
+          <option value="uDec">dec</option>
+          <option value="uC">c</option>
+        </select>
+      </div>
+
+      <div class="hero">
+        <h4>To</h4>
+      </div>
+
+      <div class="hero">
+        <select id="timeto" onchange="convUnits('time')">
+          <option value="uMs">ms</option>
+          <option selected value="uSec">sec</option>
+          <option value="uMin">min</option>
+          <option value="uHr">hr</option>
+          <option value="uDay">day</option>
+          <option value="uWk">wk</option>
+          <option value="uMo">mo</option>
+          <option value="uYr">yr</option>
+          <option value="uDec">dec</option>
+          <option value="uC">c</option>
+        </select>
+      </div>
+
+      <div class="hero zero">
+        <input
+          id="timeBtn"
+          type="button"
+          value="convert"
+          onclick="convUnits('time');"
+        />
+      </div>
+    </div>
+
+    <div id="Length" style="display: none">
+      <div class="hero">
+        <h3>Length</h3>
+      </div>
+      <div class="hero">
+        <input
+          type="number"
+          value="1"
+          min="1"
+          id="lgthamt"
+          onkeyup="convUnits('lgth')"
+        />
+      </div>
+      <div class="hero">
+        <h4>From</h4>
+      </div>
+      <div class="hero">
+        <select id="lgthfr" onchange="convUnits('lgth')">
+          <option>==Metric==</option>
+          <option value="uMm">mm</option>
+          <option value="uCm">cm</option>
+          <option value="uM">m</option>
+          <option>==Imperial==</option>
+          <option selected value="uIn">in</option>
+          <option value="uFt">ft</option>
+          <option value="uYd">yd</option>
+          <option value="uMi">mi</option>
+        </select>
+      </div>
+
+      <div class="hero">
+        <h4>To</h4>
+      </div>
+      <div class="hero">
+        <select id="lgthto" onchange="convUnits('lgth')">
+          <option>==Metric==</option>
+          <option value="uMm">mm</option>
+          <option selected value="uCm">cm</option>
+          <option value="uM">m</option>
+          <option>==Imperial==</option>
+          <option value="uIn">in</option>
+          <option value="uFt">ft</option>
+          <option value="uYd">yd</option>
+          <option value="uMi">mi</option>
+        </select>
+      </div>
+
+      <div class="hero zero">
+        <input
+          id="lgthBtn"
+          type="button"
+          value="convert"
+          onclick="convUnits('lgth');"
+        />
+      </div>
+    </div>
+
+    <div id="Temperature" style="display: none">
+      <div class="hero">
+        <h3>Temperature</h3>
+      </div>
+      <div class="hero">
+        <input type="number" value="1" id="tmpamt" onkeyup="convTmp()" />
+      </div>
+      <div class="hero">
+        <h4>From</h4>
+      </div>
+
+      <div class="hero">
+        <select id="tmpfr" onchange="convTmp()">
+          <option value="uDegc">°C</option>
+          <option selected value="uDegf">°F</option>
+          <option value="uDegk">K</option>
+          <option value="uDegn">°N</option>
+        </select>
+      </div>
+
+      <div class="hero">
+        <h4>To</h4>
+      </div>
+
+      <div class="hero">
+        <select id="tmpto" onchange="convTmp()">
+          <option selected value="uDegc">°C</option>
+          <option value="uDegf">°F</option>
+          <option value="uDegk">K</option>
+          <option value="uDegn">°N</option>
+        </select>
+      </div>
+
+      <div class="hero zero">
+        <input id="tmpBtn" type="button" value="convert" onclick="convTmp();" />
+      </div>
+    </div>
+
+    <div id="IT" style="display: none">
+      <div class="hero">
+        <h3>IT</h3>
+      </div>
+
+      <div class="hero">
+        <input
+          type="number"
+          value="1"
+          min="1"
+          id="itamt"
+          onkeyup="convUnits('it')"
+        />
+      </div>
+      <div class="hero">
+        <h4>From</h4>
+      </div>
+
+      <div class="hero">
+        <select id="itfr" onchange="convUnits('it')">
+          <option value="uBit">bit</option>
+          <option value="uByte">byte</option>
+          <option value="uKb">KB</option>
+          <option selected value="uMb">MB</option>
+          <option value="uGb">GB</option>
+          <option value="uTb">TB</option>
+        </select>
+      </div>
+
+      <div class="hero">
+        <h4>To</h4>
+      </div>
+
+      <div class="hero">
+        <select id="itto" onchange="convUnits('it')">
+          <option value="uBit">bit</option>
+          <option value="uByte">byte</option>
+          <option selected value="uKb">KB</option>
+          <option value="uMb">MB</option>
+          <option value="uGb">GB</option>
+          <option value="uTb">TB</option>
+        </select>
+      </div>
+
+      <div class="hero zero">
+        <input
+          id="itBtn"
+          type="button"
+          value="convert"
+          onclick="convUnits('it');"
+        />
+      </div>
+    </div>
+
+    <div id="Area" style="display: none">
+      <div class="hero">
+        <h3>Area</h3>
+      </div>
+
+      <div class="hero">
+        <input
+          type="number"
+          value="1"
+          min="1"
+          id="areaamt"
+          onkeyup="convUnits('area')"
+        />
+      </div>
+
+      <div class="hero">
+        <h4>From</h4>
+      </div>
+
+      <div class="hero">
+        <select id="areafr" onchange="convUnits('area')">
+          <option>==Metric==</option>
+          <option value="uCm2">cm²</option>
+          <option value="uM2">m²</option>
+          <option value="uKm2">km²</option>
+          <option value="uHectare">hectare</option>
+          <option>==Imperial==</option>
+          <option value="uSqin">sq in</option>
+          <option selected value="uSqft">sq ft</option>
+          <option value="uSqmi">sq mi</option>
+          <option value="uAcre">acre</option>
+        </select>
+      </div>
+
+      <div class="hero">
+        <h4>To</h4>
+      </div>
+
+      <div class="hero">
+        <select id="areato" onchange="convUnits('area')">
+          <option>==Metric==</option>
+          <option value="uCm2">cm²</option>
+          <option selected value="uM2">m²</option>
+          <option value="uKm2">km²</option>
+          <option value="uHectare">hectare</option>
+          <option>==Imperial==</option>
+          <option value="uSqin">sq in</option>
+          <option value="uSqft">sq ft</option>
+          <option value="uSqmi">sq mi</option>
+          <option value="uAcre">acre</option>
+        </select>
+      </div>
+
+      <div class="hero zero">
+        <input
+          id="areaBtn"
+          type="button"
+          value="convert"
+          onclick="convUnits('area');"
+        />
+      </div>
+    </div>
+
+    <div id="Mass" style="display: none">
+      <div class="hero">
+        <h3>Mass</h3>
+      </div>
+      <div class="hero">
+        <input
+          type="number"
+          value="1"
+          min="1"
+          id="massamt"
+          onkeyup="convUnits('mass')"
+        />
+      </div>
+
+      <div class="hero">
+        <h4>From</h4>
+      </div>
+
+      <div class="hero">
+        <select id="massfr" onchange="convUnits('mass')">
+          <option>==Metric==</option>
+          <option value="uMg">mg</option>
+          <option value="uG">g</option>
+          <option value="uKg">kg</option>
+          <option value="uTon">ton / tonne (metric ton)</option>
+          <option>==Imperial==</option>
+          <option value="uOz">oz</option>
+          <option value="uOzav">oz avoirdupois</option>
+          <option selected value="uLb">lb</option>
+          <option value="uStone">stone</option>
+          <option value="uSt">short ton</option>
+        </select>
+      </div>
+
+      <div class="hero">
+        <h4>To</h4>
+      </div>
+
+      <div class="hero">
+        <select id="massto" onchange="convUnits('mass')">
+          <option>==Metric==</option>
+          <option value="uMg">mg</option>
+          <option value="uG">g</option>
+          <option selected value="uKg">kg</option>
+          <option value="uTon">ton / tonne (metric ton)</option>
+          <option>==Imperial==</option>
+          <option value="uOz">oz</option>
+          <option value="uOzav">oz avoirdupois</option>
+          <option value="uLb">lb</option>
+          <option value="uStone">stone</option>
+          <option value="uSt">ton</option>
+        </select>
+      </div>
+
+      <div class="hero zero">
+        <input
+          id="massBtn"
+          type="button"
+          value="convert"
+          onclick="convUnits('mass');"
+        />
+      </div>
+    </div>
+
+    <div id="Volume" style="display: none">
+      <div class="hero">
+        <h3>Volume</h3>
+      </div>
+      <div class="hero">
+        <input
+          type="number"
+          value="1"
+          min="1"
+          id="volamt"
+          onkeyup="convUnits('vol')"
+        />
+      </div>
+
+      <div class="hero">
+        <h4>From</h4>
+      </div>
+      <div class="hero">
+        <select id="volfr" onchange="convUnits('vol')">
+          <option>==Metric==</option>
+          <option value="uL">litre</option>
+          <option value="uMl">millilitre</option>
+          <option value="uCc">cc</option>
+          <option value="uMm3">mm³</option>
+          <option value="uM3">m³</option>
+          <option value="uKm3">km³</option>
+          <option>==Imperial==</option>
+          <option selected value="uFloz">fl oz (imp)</option>
+          <option value="uTsp">teaspoon (Can)</option>
+          <option value="uTbsp">tablespoon (Can)</option>
+          <option value="uCup">cup</option>
+          <option value="uGali">gal (imp)</option>
+          <option value="uGalu">gal (US)</option>
+          <option value="uPt">pint (imp)</option>
+          <option value="uQt">quart (imp)</option>
+          <option value="uCuin">cu in</option>
+          <option value="uCuft">cu ft</option>
+          <option value="uCumi">cu mi</option>
+        </select>
+      </div>
+
+      <div class="hero">
+        <h4>To</h4>
+      </div>
+
+      <div class="hero">
+        <select id="volto" onchange="convUnits('vol')">
+          <option value="uL">litre</option>
+          <option selected value="uMl">millilitre</option>
+          <option value="uCc">cc</option>
+          <option value="uMm3">mm³</option>
+          <option value="uM3">m³</option>
+          <option value="uKm3">km³</option>
+          <option>==Imperial==</option>
+          <option value="uFloz">fl oz (imp)</option>
+          <option value="uTsp">teaspoon (Can)</option>
+          <option value="uTbsp">tablespoon (Can)</option>
+          <option value="uCup">cup</option>
+          <option value="uGali">gal (imp)</option>
+          <option value="uGalu">gal (US)</option>
+          <option value="uPt">pint (imp)</option>
+          <option value="uQt">quart (imp)</option>
+          <option value="uCuin">cu in</option>
+          <option value="uCuft">cu ft</option>
+          <option value="uCumi">cu mi</option>
+        </select>
+      </div>
+
+      <div class="hero zero">
+        <input
+          id="volBtn"
+          type="button"
+          value="convert"
+          onclick="convUnits('vol');"
+        />
+      </div>
+    </div>
+
+    <div id="Speed" style="display: none">
+      <div class="hero">
+        <h3>Speed</h3>
+      </div>
+      <div class="hero">
+        <input
+          type="number"
+          value="1"
+          min="1"
+          id="spdamt"
+          onkeyup="convUnits('spd')"
+        />
+      </div>
+
+      <div class="hero">
+        <h4>From</h4>
+      </div>
+      <div class="hero">
+        <select id="spdfr" onchange="convUnits('spd')">
+          <option>==Metric==</option>
+          <option value="uMs">m/s</option>
+          <option value="uKmh">km/h</option>
+          <option>==Imperial==</option>
+          <option selected value="uMph">mph</option>
+          <option value="uMpm">mpm</option>
+          <option value="uMps">mps</option>
+          <option value="uFps">fps</option>
+        </select>
+      </div>
+
+      <div class="hero">
+        <h4>To</h4>
+      </div>
+
+      <div class="hero">
+        <select id="spdto" onchange="convUnits('spd')">
+          <option>==Metric==</option>
+          <option value="uMs">m/s</option>
+          <option selected value="uKmh">km/h</option>
+          <option>==Imperial==</option>
+          <option value="uMph">mph</option>
+          <option value="uMpm">mpm</option>
+          <option value="uMps">mps</option>
+          <option value="uFps">fps</option>
+        </select>
+      </div>
+
+      <div class="hero zero">
+        <input
+          id="spdBtn"
+          type="button"
+          value="convert"
+          onclick="convUnits('spd');"
+        />
+      </div>
+    </div>
+
+    <div id="result" style="display: none">
+      <div class="hero"></div>
+
+      <h3>Result:</h3>
+
+      <div id="result">&nbsp;</div>
+
+      <br />
+      <br />
+      <div id="resulttable">&nbsp;</div>
+    </div>
+  </body>
+</html>
