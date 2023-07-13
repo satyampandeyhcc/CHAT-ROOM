@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #201e1d, #112643);
+}
+
+.calculator {
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: #09596985;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+
+input {
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    border: 1px solid #c3c6ce5e;
+    color: #ffffff;
+    border-radius:20px;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 37%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: rgba(255, 255, 255, 0.07999911199999) -8px -8px 15px;
+    cursor: pointer;
+}
+
+.equalBtn {
+    background-color: #fb7c14;
+}
+
+.operator {
+    color: #e5cd44;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button:active {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-title {
+    text-align: center;
+    color:#899fa6;
+    font-size: 33px;
+    margin-bottom: -2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: rgb(80 88 102 / 50%);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}
+
+@media (max-width: 768px) {
+    /* Adjust input width and font size for smaller screens */
+    input {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    /* Adjust button width and margin for smaller screens */
+    button {
+        width: 50px;
+        margin: 5px;
+    }
+}
