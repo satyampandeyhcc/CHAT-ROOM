@@ -1,0 +1,184 @@
+/* Body styles */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h3 {
+    display: block;
+    font-size: 2.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+  
+
+h4 {
+  display: block;
+  font-size: 22px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
+  #result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(23 70 152);
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #becfd5;
+  }
+  
+  /* Header styles */
+  h1 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Select styles */
+  select {
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+
+  }
+  
+  /* Input styles */
+  input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+  }
+  
+  /* Button styles */
+  input[type="button"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Container styles */
+  #grpTime,
+  #grpLength,
+  #grpTemperature,
+  #grpIT,
+  #grpArea,
+  #grpMass,
+  #grpVolume,
+  #grpSpeed {
+    margin-top: 20px;
+  }
+  
+  .zero{
+    padding :27px;
+  }
+
+  .calculator {
+    text-align: center;
+    width: 100%;
+    color:#060d83c2;
+    font-size: 50px;
+    margin-bottom: -2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: #00839d47;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.09 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}
+.intros{
+  padding-bottom:57px ;
+}
+.intro{
+  padding-bottom:23px ;
+}
+
+/* Select hover effect */
+select:hover {
+  border-color: #999;
+}
+
+/* Input hover effect */
+input[type="number"]:hover {
+  border-color: #999;
+}
+
+/* Button hover effect */
+input[type="button"]:hover {
+  background-color: #555;
+}
+
+/* Calculator box shadow effect */
+.calculator {
+  /* Existing styles */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.09);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* Additional styles */
+  transition: box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Zero button padding effect */
+.zero {
+  /* Existing styles */
+  padding: 27px;
+  /* Additional styles */
+  transition: padding 0.3s ease;
+}
+
+.zero:hover {
+  padding: 22px;
+}
+
+/* Intros padding effect */
+.intros {
+  /* Existing styles */
+  padding-bottom: 57px;
+  /* Additional styles */
+  transition: padding 0.3s ease;
+}
+
+.intros:hover {
+  padding-bottom: 52px;
+}
+
+.intro {
+  /* Existing styles */
+  padding-bottom: 23px;
+  /* Additional styles */
+  transition: padding 0.3s ease;
+}
+
+.intro:hover {
+  padding-bottom: 18px;
+}
